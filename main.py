@@ -4,6 +4,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 
+#from sklearn.metrics import accuracy_score
+
 
 # Read x data from CSV file
 x_df = pd.read_csv('ex2_x_data.csv', header=None)
@@ -51,6 +53,11 @@ from sklearn.metrics import confusion_matrix
 conf_mat = confusion_matrix(y_test, y_pred) #kxk = matrix up to 10 x 10
 print("Confusion matrix:\n", conf_mat)
 
+# Calculate accuracy rate
+accuracy = accuracy_score(y_test, y_pred)
+
+# Print the accuracy rate
+print("Accuracy rate:", accuracy)
 # import pandas as pd
 # from sklearn.model_selection import train_test_split
 # from sklearn.linear_model import LogisticRegression
